@@ -1,0 +1,13 @@
+{
+    "autoload": {
+        "psr-4": {
+            "SampleNamespace\\": "src/",
+            "App\\": "app/"
+        }
+    },
+    "require": {
+        "bramus/router": "~1.6",
+        "league/plates": "^3.5",
+        "doctrine/dbal": "^3.7"
+    }
+}
