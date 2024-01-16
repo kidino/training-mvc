@@ -16,8 +16,9 @@ $router->post('/login', 'App\Controllers\Auth@do_login');
 $router->get('/logout', 'App\Controllers\Auth@logout');
 
 // user -- admin only page
-$router->get('/user/(\d+)', 'App\Controllers\Users@user_details');
-$router->get('/user', 'App\Controllers\Users@user_list');
+$router->get('/user/(\d+)', 'App\Controllers\Users@details');
+$router->get('/user', 'App\Controllers\Users@index');
+$router->post('/user/(\d+)', 'App\Controllers\Users@store');
 
 // member's only page
 $router->get('/member', 'App\Controllers\Member@index');

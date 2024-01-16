@@ -14,6 +14,7 @@ class Model {
     }
 
     function get_by_id($id = 0) {
+        $this->query_builder = $this->db_conn->createQueryBuilder();
         $stmt = $this->query_builder
             ->select('*')
             ->from( $this->table )

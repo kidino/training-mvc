@@ -14,7 +14,7 @@
 
     <?=$this->section('main-area')?>
 
-    <footer class="text-center border-top">
+    <footer class="text-center border-top mt-5">
         <div class="container text-muted py-4 py-lg-5">
             <p class="mb-0">Copyright © 2024 My App</p>
         </div>
