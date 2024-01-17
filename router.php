@@ -45,5 +45,9 @@ $router->before('GET|POST', '/user.*', function() {
 });
 
 
+$router->get('/office/permohonan/(\d+)/review', 'App\Controllers\Permohonan@review');
+$router->post('/office/permohonan/(\d+)/review', 'App\Controllers\Permohonan@do_review');
+
+
 // run router
 $router->run();
