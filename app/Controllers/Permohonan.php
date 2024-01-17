@@ -95,6 +95,26 @@ class Permohonan extends Controller {
         $user = $permohonan_model->save($to_save);
         header('Location: /office/permohonan/'. $id .'/review?saved=1');
     }
+    
+  function approval_data($id) {
+        $permohonan = new \App\Models\Permohonan();
+        $detail = $permohonan->get_by_id($id);
+    
+        echo $this->templates->render('home::approval', [ 'permohonan' => $detail[0] ] );
+    }
+
+    function simpan_approval() {
+        $permohonan = new \App\Models\Permohonan();
+        $id = $_POST['id'];
+        $status = $_POST['status'];
+        $save = [
+            'id' => $id,
+           'status' => $status
+        ];
+        $user = $permohonan->save($save);
+        
+       
+    }
 
     function senarai($show='baru'){
         $mohon_model = new \App\Models\Permohonan();
