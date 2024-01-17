@@ -19,8 +19,8 @@
             <th>semak_oleh</th>
             <th>tarikh_semak</th>
             <th>tarikh_lulus</th>
-            <th>dilulus_oleh`</th>
-            <th></th>
+            <th>dilulus_oleh</th>
+            <th>&nbsp;</th>
         </tr>
     </thead>
     <tbody>
@@ -33,10 +33,10 @@
                 <td><?= $mohon['jenis']?></td>
                 <td><?= $mohon['status']?></td>
                 <td><?= $mohon['created_at']?></td>
-                <td><?= $mohon['semak_oleh']?></td>
+                <td><?= $mohon['nama_semak']?></td>
                 <td><?= $mohon['tarikh_semak']?></td>
                 <td><?= $mohon['tarikh_lulus']?></td>
-                <td><?= $mohon['dilulus_oleh']?></td>
+                <td><?= $mohon['nama_lulus']?></td>
                 <td>
                     <?php 
                     if($mohon['status'] == 'baru'){
@@ -44,7 +44,7 @@
                         <a class="btn btn-sm btn-secondary" href="/office/permohonan/<?= $mohon['id']?>/review">Edit</a>
                     <?php
                     }
-                    elseif($mohon['status'] == 'telah disemak'){
+                    elseif($mohon['status'] == 'semak'){
                     ?>
                         <a class="btn btn-sm btn-secondary" href="/office/permohonan/<?= $mohon['id']?>/approval">Edit</a>
                     <?php
