@@ -57,7 +57,7 @@
                     <td> <?= $permohonan['dilulus_oleh'] ?></td>
                 </tr>
                 <!-- Additional rows here -->
-            </form>
+           
         </tbody>
     </table>
 
