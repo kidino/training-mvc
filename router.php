@@ -50,6 +50,10 @@ $router->post('/permohonan', 'App\Controllers\Permohonan@hantar');
 
 $router->get('/office/permohonan/(\d+)/review', 'App\Controllers\Permohonan@review');
 $router->post('/office/permohonan/(\d+)/review', 'App\Controllers\Permohonan@do_review');
+$router->get('/office/permohonan', 'App\Controllers\Permohonan@senarai');
+$router->get('/office/permohonan/(semak)', 'App\Controllers\Permohonan@senarai');
+$router->get('/office/permohonan/(lulus)', 'App\Controllers\Permohonan@senarai');
+$router->get('/office/permohonan/(gagal)', 'App\Controllers\Permohonan@senarai');
 
 
 // run router
