@@ -13,4 +13,8 @@ class Home extends Controller {
         echo $this->templates->render('home::about');
     }
 
+    function not_found() {
+        header('HTTP/1.1 404 Not Found');
+        echo $this->templates->render('home::404');
+    }
 }

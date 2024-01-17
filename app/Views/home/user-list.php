@@ -12,6 +12,7 @@
             <th>ID</th>
             <th>Username</th>
             <th>Email</th>
+            <th>Role</th>
             <th></th>
         </tr>
     </thead>
@@ -21,6 +22,7 @@
                 <td><?= $user['id']?></td>
                 <td><?= $user['username']?></td>
                 <td><?= $user['email']?></td>
+                <td><?= $user['role']?></td>
                 <td><a class="btn btn-sm btn-secondary" href="/user/<?= $user['id']?>">Edit</a></td>
             </tr>
         <?php endforeach; ?>

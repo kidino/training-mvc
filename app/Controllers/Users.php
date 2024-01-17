@@ -19,10 +19,12 @@ class Users extends Controller {
     }
 
     function store($id) {
+
         $username = $_POST['username'];
         $password = $_POST['password'];
         $confirm_password = $_POST['confirm_password'];
         $email = $_POST['email'];
+        $role = ($_POST['role'] ?? '');
 
         // array to capture validation errors
         $errors = [];
@@ -57,7 +59,8 @@ class Users extends Controller {
             $to_save = [
                 'id' => $id,
                 'username' => $username,
-                'email' => $email
+                'email' => $email,
+                'role' => $role
             ];
 
             if($password !== '') {
@@ -66,11 +69,13 @@ class Users extends Controller {
 
             $user = $user_model->save($to_save);
             header('Location: /user/'. $id .'?saved=1');
+            exit;
         }
 
         $user = $user_model->get_by_id($id);
         // reload the register page with the validation errors
-        echo $this->templates->render('home::user-details', [ 'data' => $_POST, 'errors' => $errors, 'user' => $user[0]]);
+        echo $this->templates->render('home::user-details', [ 
+            'data' => $_POST, 'errors' => $errors, 'user' => $user[0]]);
     }
 
 }

@@ -7,6 +7,7 @@ $router = new \Bramus\Router\Router();
 
 $router->get('/', 'App\Controllers\Home@index');
 $router->get('/about', 'App\Controllers\Home@about');
+$router->set404('\App\Controllers\Home@not_found');
 
 // auth related URLs
 $router->get('/login', 'App\Controllers\Auth@login');
