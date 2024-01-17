@@ -45,9 +45,8 @@
                     <td> <?= $permohonan['tapak']?></td>
                     <td> <?= $permohonan['jenis_perniagaan'] ?></td>
                     <td>
-                        <select name="status" class="form-control">
-                            <option value="baru">Baru</option>
-                            <option value="telah disemak">Telah Disemak</option>
+                        <select name="status" class="form-control">                          
+                          <option value="">Sila Pilih</option>
                             <option value="lulus">Lulus</option>
                             <option value="gagal">Gagal</option>
                         </select>

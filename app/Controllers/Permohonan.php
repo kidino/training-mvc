@@ -115,7 +115,7 @@ class Permohonan extends Controller {
         ];
         $user = $permohonan->save($save);
         
-       
+       echo $this->templates->render('office::lulus');
     }
 
     function senarai($show='baru'){
