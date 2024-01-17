@@ -44,7 +44,7 @@
                         <a class="btn btn-sm btn-secondary" href="/office/permohonan/<?= $mohon['id']?>/review">Edit</a>
                     <?php
                     }
-                    elseif($mohon['status'] == 'telah disemak'){
+                    elseif($mohon['status'] == 'semak'){
                     ?>
                         <a class="btn btn-sm btn-secondary" href="/office/permohonan/<?= $mohon['id']?>/approval">Edit</a>
                     <?php

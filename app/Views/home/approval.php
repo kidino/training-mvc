@@ -39,11 +39,11 @@
                     <tr>
                         <input type="hidden" name="id" value="$permohonan[id]">
 
-                        <td>$permohonan[id]</td>
-                        <td>$permohonan[nama]</td>
-                        <td>$permohonan[nokp]</td>
-                        <td>$permohonan[tapak]</td>
-                        <td>$permohonan[jenis_perniagaan]</td>
+                        <td>$permohonan['id']</td>
+                        <td>$permohonan['nama']</td>
+                        <td>$permohonan['nokp']</td>
+                        <td>$permohonan['tapak']</td>
+                        <td>$permohonan['jenis_perniagaan']</td>
                         <td>
                             <select name="status">
                                 <option value="baru">Baru</option>
@@ -52,10 +52,10 @@
                                 <option value="gagal">Gagal</option>
                             </select>
                         </td>
-                        <td>[semak_oleh]</td>
-                        <td>[tarikh_semak]</td>
-                        <td>[tarikh_lulus]</td>
-                        <td>[dilulus_oleh]</td>
+                        <td>$permohonan['semak_oleh']</td>
+                        <td>$permohonan['tarikh_semak']</td>
+                        <td>$permohonan['tarikh_lulus']</td>
+                        <td>$permohonan['dilulus_oleh']</td>
                     </tr>
                  
                 </tbody>
