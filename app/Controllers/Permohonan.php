@@ -99,7 +99,7 @@ class Permohonan extends Controller {
   function approval_data($id) {
         $permohonan = new \App\Models\Permohonan();
         $detail = $permohonan->get_by_id($id);
-    
+        
         echo $this->templates->render('home::approval', [ 'permohonan' => $detail[0] ] );
     }
 
@@ -107,15 +107,16 @@ class Permohonan extends Controller {
         $permohonan = new \App\Models\Permohonan();
         $id = $_POST['id'];
         $status = $_POST['status'];
+        
         $save = [
             'id' => $id,
            'status' => $status,
-           'dilulus_oleh' => 'admin',
-           'tarikh_lulus' => '17-1-2024'
+           'dilulus_oleh' => $_SESSION['user']['id'],
+           'tarikh_lulus' => date('Y-m-d H:i:s')
         ];
-        $user = $permohonan->save($save);
-        
-       
+        $permohonan->save($save);
+        $mohons = $permohonan->get_by_status('lulus');
+       echo $this->templates->render('office::lulus', [ 'mohons' => $mohons ]);
     }
 
     function senarai($show='baru'){
