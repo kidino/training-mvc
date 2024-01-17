@@ -33,6 +33,8 @@ class Model {
 
     function save(array $data)
     {
+        // var_dump($data);
+        // die();
         try {
             $id;
             if (isset($data[ $this->id ])) {

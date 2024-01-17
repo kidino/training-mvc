@@ -44,6 +44,9 @@ $router->before('GET|POST', '/user.*', function() {
     }
 });
 
+// permohonan syasya
+$router->get('/permohonan', 'App\Controllers\Permohonan@mohon');
+$router->post('/permohonan', 'App\Controllers\Permohonan@hantar');
 
 // run router
 $router->run();
