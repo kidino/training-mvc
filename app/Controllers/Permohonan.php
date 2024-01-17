@@ -116,7 +116,8 @@ class Permohonan extends Controller {
         ];
         $permohonan->save($save);
         $mohons = $permohonan->get_by_status('lulus');
-       echo $this->templates->render('office::lulus', [ 'mohons' => $mohons ]);
+      // echo $this->templates->render('office::lulus', [ 'mohons' => $mohons ]);
+      header('Location: /office/permohonan/' . $status);
     }
 
     function senarai($show='baru'){
