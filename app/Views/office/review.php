@@ -61,9 +61,7 @@
                         <div class="col-md-3">Tukar Status</div>
                         <div class="col-md-9"><select name="status" class="form-control">
                             <option>baru</option>
-                            <option>telah disemak</option>
-                            <option>lulus</option>
-                            <option>gagal</option>
+                            <option value="semak">telah disemak</option>
                         </select>
                     </div>
                     </div>
