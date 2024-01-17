@@ -95,7 +95,7 @@ class Permohonan extends Controller {
         $user = $permohonan_model->save($to_save);
         header('Location: /office/permohonan/'. $id .'/review?saved=1');
     }
-    
+
   function approval_data($id) {
         $permohonan = new \App\Models\Permohonan();
         $detail = $permohonan->get_by_id($id);
@@ -109,7 +109,9 @@ class Permohonan extends Controller {
         $status = $_POST['status'];
         $save = [
             'id' => $id,
-           'status' => $status
+           'status' => $status,
+           'dilulus_oleh' => 'admin',
+           'tarikh_lulus' => '17-1-2024'
         ];
         $user = $permohonan->save($save);
         

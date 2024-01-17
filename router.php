@@ -44,6 +44,8 @@ $router->before('GET|POST', '/user.*', function() {
     }
 });
 
+$router->get('/office/permohonan/{id}}/approval', 'App\Controllers\Permohonan@approval_data');
+$router->post('/office/permohonan/{id}}/approval', 'App\Controllers\Permohonan@simpan_approval');
 // permohonan syasya
 $router->get('/permohonan', 'App\Controllers\Permohonan@mohon');
 $router->post('/permohonan', 'App\Controllers\Permohonan@hantar');
