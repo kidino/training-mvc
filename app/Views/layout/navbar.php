@@ -23,6 +23,7 @@ function is_active($path) {
                 <?php if (!isset($_SESSION['user'])) : ?>
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link <?= is_active('/about') ?>" href="/about">About</a></li>
+                    <li class="nav-item"><a class="nav-link <?= is_active('/permohonan') ?>" href="/permohonan">Permohonan</a></li>
                     <li class="nav-item"><a class="nav-link  <?= is_active('/login') ?>" href="/login">Login</a></li>
                     <li class="nav-item"><a class="nav-link <?= is_active('/register') ?>" href="/register">Register</a></li>
                 </ul>
@@ -30,6 +31,7 @@ function is_active($path) {
 
                 <?php if (isset($_SESSION['user'])) : ?>
                 <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link <?= is_active('/office/permohonan') ?>" href="/office/permohonan">Senarai Permohonan</a></li>
                     <li class="nav-item"><a class="nav-link <?= is_active('/member') ?>" href="/member">Member</a></li>
 
                     <?php if($_SESSION['user']['role'] == 'admin') : ?>
