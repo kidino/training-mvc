@@ -1,10 +1,27 @@
+<?php use \App\Lib\Utils; ?>
 <?php $this->layout('layout::main') ?>
 <?php $this->start('main-area') ?>
-<a href="/office/permohonan">Baru</a> | <a href="/office/permohonan/semak">Perlu Kelulusan</a> | <a href="/office/permohonan/lulus">Lulus</a> | <a href="/office/permohonan/gagal">Gagal</a> | 
 <div class="container mt-5">
     <div class="row">
         <div class="col">
-            <h1>User List</h1>
+
+        <h1>Senarai Permohonan</h1>
+
+
+<ul class="nav nav-tabs mb-3">
+  <li class="nav-item">
+    <a class="nav-link <?= Utils::is_active('/office/permohonan') ?>" href="/office/permohonan">Baru</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link <?= Utils::is_active('/office/permohonan/semak') ?>"  href="/office/permohonan/semak">Perlu disemak</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link <?= Utils::is_active('/office/permohonan/lulus') ?>" href="/office/permohonan/lulus">Lulus</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link <?= Utils::is_active('/office/permohonan/gagal') ?>" href="/office/permohonan/gagal">Gagal</a>
+  </li>
+</ul>
 
 <table class="table table-striped">
     <thead>

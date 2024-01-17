@@ -22,4 +22,19 @@ class Utils {
             && ($_SESSION['user']['role'] == $role)
         );
     }
+
+    static function is_active($path) {
+        $fullUrl = "http";
+        if (isset($_SERVER["HTTPS"]) && $_SERVER["HTTPS"] === "on") {
+            $fullUrl .= "s";
+        }
+        $fullUrl .= "://" . $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"];
+        
+        // Parse the URL
+        $urlParts = parse_url($fullUrl);
+    
+        if($path == $urlParts['path']) {
+            return 'active';
+        }
+    }
 }

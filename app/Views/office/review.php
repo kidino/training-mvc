@@ -25,7 +25,7 @@
                     <form method="post">
                     <div class="row mb-3">
                         <div class="col-md-3">Nama</div>
-                        <div class="col-md-9"><input class="form-control" type="text" name="nama" placeholder="Nama" value="<?=($data['nama'] ?? '')?>"></div>
+                        <div class="col-md-9"><input class="form-control" type="text" name="nama" placeholder="Nama" value="<?= ($data['nama'] ?? '')?>"></div>
                     </div>
                     <div class="row mb-3">
                         <div class="col-md-3">No Kad Pengenalan</div>
