@@ -44,8 +44,8 @@ $router->before('GET|POST', '/user.*', function() {
     }
 });
 
-$router->get('/office/permohonan/{id}}/approval', 'App\Controllers\Permohonan@approval_data');
-$router->post('/office/permohonan/{id}}/approval', 'App\Controllers\Permohonan@simpan_approval');
+$router->get('/office/permohonan/(\d+)/approval', 'App\Controllers\Permohonan@approval_data');
+$router->post('/office/permohonan/(\d+)/approval', 'App\Controllers\Permohonan@simpan_approval');
 // permohonan syasya
 $router->get('/permohonan', 'App\Controllers\Permohonan@mohon');
 $router->post('/permohonan', 'App\Controllers\Permohonan@hantar');
@@ -53,9 +53,7 @@ $router->post('/permohonan', 'App\Controllers\Permohonan@hantar');
 $router->get('/office/permohonan/(\d+)/review', 'App\Controllers\Permohonan@review');
 $router->post('/office/permohonan/(\d+)/review', 'App\Controllers\Permohonan@do_review');
 $router->get('/office/permohonan', 'App\Controllers\Permohonan@senarai');
-$router->get('/office/permohonan/(semak)', 'App\Controllers\Permohonan@senarai');
-$router->get('/office/permohonan/(lulus)', 'App\Controllers\Permohonan@senarai');
-$router->get('/office/permohonan/(gagal)', 'App\Controllers\Permohonan@senarai');
+$router->get('/office/permohonan/(\w+)', 'App\Controllers\Permohonan@senarai');
 
 
 // run router
