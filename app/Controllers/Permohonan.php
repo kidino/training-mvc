@@ -99,7 +99,7 @@ class Permohonan extends Controller {
   function approval_data($id) {
         $permohonan = new \App\Models\Permohonan();
         $detail = $permohonan->get_by_id($id);
-    
+        
         echo $this->templates->render('home::approval', [ 'permohonan' => $detail[0] ] );
     }
 

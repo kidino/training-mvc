@@ -20,46 +20,47 @@
                     <?php endforeach; ?>
                 </div>
             <?php endif; ?>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Id</th>
-                        <th>Nama</th>
-                        <th>No KP</th>
-                        <th>Tapak</th>
-                        <th>Jenis Perniagaan</th>
-                        <th>Status</th>
-                        <th>Semak Oleh</th>
-                        <th>Tarikh Semak</th>
-                        <th>Tarikh Lulus</th>
-                        <th>Dilulus Oleh</th>
-                    </tr>
-                </thead>
-                <tbody> <form action="/office/permohonan/<?= $permohonan['id'] ?>/approval" method="post">
-                    <tr>
-                        <input type="hidden" name="id" value="$permohonan[id]">
-
-                        <td>$permohonan['id']</td>
-                        <td>$permohonan['nama']</td>
-                        <td>$permohonan['nokp']</td>
-                        <td>$permohonan['tapak']</td>
-                        <td>$permohonan['jenis_perniagaan']</td>
-                        <td>
-                            <select name="status">
-                                <option value="baru">Baru</option>
-                                <option value="telah disemak">Telah Disemak</option>
-                                <option value="lulus">Lulus</option>
-                                <option value="gagal">Gagal</option>
-                            </select>
-                        </td>
-                        <td>$permohonan['semak_oleh']</td>
-                        <td>$permohonan['tarikh_semak']</td>
-                        <td>$permohonan['tarikh_lulus']</td>
-                        <td>$permohonan['dilulus_oleh']</td>
-                    </tr>
-                 
-                </tbody>
-            </table>
+            <table class="table table-bordered table-hover">
+        <thead class="thead-dark">
+            <tr>
+                <th>Id</th>
+                <th>Nama</th>
+                <th>No KP</th>
+                <th>Tapak</th>
+                <th>Jenis Perniagaan</th>
+                <th>Status</th>
+                <th>Semak Oleh</th>
+                <th>Tarikh Semak</th>
+                <th>Tarikh Lulus</th>
+                <th>Dilulus Oleh</th>
+            </tr>
+        </thead>
+        <tbody>
+            <form action="/office/permohonan/<?= $permohonan['id'] ?>/approval" method="post" class="form-inline">
+                <tr>
+                    <input type="hidden" name="id" value="<?= $permohonan['id'] ?>">
+                    <td> <?= $permohonan['id']?></td>
+                    <td> <?= $permohonan['nama'] ?></td>
+                    <td> <?= $permohonan['nokp'] ?></td>
+                    <td> <?= $permohonan['tapak']?></td>
+                    <td> <?= $permohonan['jenis_perniagaan'] ?></td>
+                    <td>
+                        <select name="status" class="form-control">
+                            <option value="baru">Baru</option>
+                            <option value="telah disemak">Telah Disemak</option>
+                            <option value="lulus">Lulus</option>
+                            <option value="gagal">Gagal</option>
+                        </select>
+                    </td>
+                    <td> <?= $permohonan['semak_oleh'] ?></td>
+                    <td> <?= $permohonan['tarikh_semak'] ?></td>
+                    <td> <?= $permohonan['tarikh_lulus'] ?></td>
+                    <td> <?= $permohonan['dilulus_oleh'] ?></td>
+                </tr>
+                <!-- Additional rows here -->
+            </form>
+        </tbody>
+    </table>
 
                 <div class="mb-3"><button class="btn btn-primary d-block w-100" type="submit">Save</button></div>
 
