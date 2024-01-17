@@ -114,8 +114,8 @@ class Permohonan extends Controller {
            'tarikh_lulus' => '17-1-2024'
         ];
         $user = $permohonan->save($save);
-        
-       echo $this->templates->render('office::lulus');
+        $mohons = $permohonan->get_by_status('lulus');
+       echo $this->templates->render('office::lulus', [ 'mohons' => $mohons ]);
     }
 
     function senarai($show='baru'){
