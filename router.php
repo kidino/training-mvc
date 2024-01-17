@@ -44,6 +44,11 @@ $router->before('GET|POST', '/user.*', function() {
     }
 });
 
+$router->get('/office/permohonan', 'App\Controllers\Permohonan@senarai');
+$router->get('/office/permohonan/(semak)', 'App\Controllers\Permohonan@senarai');
+$router->get('/office/permohonan/(lulus)', 'App\Controllers\Permohonan@senarai');
+$router->get('/office/permohonan/(gagal)', 'App\Controllers\Permohonan@senarai');
+
 
 // run router
 $router->run();

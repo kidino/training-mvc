@@ -11,6 +11,7 @@ class Controller {
         $this->templates->addFolder('auth', '../app/Views/auth');
         $this->templates->addFolder('home', '../app/Views/home');
         $this->templates->addFolder('member', '../app/Views/member');
+        $this->templates->addFolder('office', '../app/Views/office');
     }
 
 }
